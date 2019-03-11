@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RESPONSIVE NAVIGATION BAR</title>
+		<meta name="viewport" content-type="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".hamburger-btn .fa-times").hide();
+				
+				$(".hamburger-btn .fa-bars").click(function(){
+                   $(this).hide();
+				   $(".hamburger-btn .fa-times").show();
+				   $(".mob ul").addClass("active");
+				});
+				
+				$(".hamburger-btn .fa-times").click(function(){
+                   $(this).hide();
+				   $(".hamburger-btn .fa-bars").show();
+				   $(".mob ul").removeClass("active");
+				});
+				
+            });
+        
+        </script>
+    </head>
+    <body>
+        
+        <div class="container">
+            <nav class="desk">
+                <ul>
+                <li class="active"><a href="#">home</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">maps</a></li>
+                <li><a href="#">blogs</a></li>
+                <li><a href="#">contact us</a></li>
+                </ul>
+            </nav>
+			
+			<nav class="mob">
+			    <div class="hamburger-btn">
+				  <i class="fas fa-times"></i>
+				  <i class="fas fa-bars"></i>
+				</div>
+                <ul>
+                <li class="active"><a href="#">home</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">maps</a></li>
+                <li><a href="#">blogs</a></li>
+                <li><a href="#">contact us</a></li>
+                </ul>
+            </nav>
+			
+			<div class="header"></div>
+       </div>
+        
+    </body>
+</html>
